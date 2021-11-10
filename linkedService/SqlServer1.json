@@ -1,0 +1,22 @@
+{
+	"name": "SqlServer1",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "Integrated Security=False;Data Source=W10PROF;Initial Catalog=source;User ID=usuario_bi",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "linked_server_akv",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "sqlserver-onprem-W10PROF-passwd"
+			}
+		},
+		"connectVia": {
+			"referenceName": "integrationRuntime-hospedado",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
