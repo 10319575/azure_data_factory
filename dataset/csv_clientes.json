@@ -1,5 +1,5 @@
 {
-	"name": "DelimitedText1",
+	"name": "csv_clientes",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "linked_server_blobstorage",
