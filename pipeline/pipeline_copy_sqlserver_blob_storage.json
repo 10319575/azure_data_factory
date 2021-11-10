@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy data1",
+				"name": "Extract_Load_Blob_Storage",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
