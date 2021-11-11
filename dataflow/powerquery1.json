@@ -1,0 +1,20 @@
+{
+	"name": "powerquery1",
+	"properties": {
+		"type": "WranglingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"name": "csv_clientes",
+					"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~>  csv_clientes",
+					"dataset": {
+						"referenceName": "csv_clientes",
+						"type": "DatasetReference"
+					}
+				}
+			],
+			"script": "section Section1;\r\nshared csv_clientes = let\r\n  AdfDoc = AzureStorage.BlobContents(\"https://blobstoragerjz.blob.core.windows.net/input/cars.csv\"),\r\n  Csv = Csv.Document(AdfDoc, [Delimiter = \",\", Encoding = TextEncoding.Utf8, QuoteStyle = QuoteStyle.Csv])\r\nin\r\n  Csv;\r\nshared UserQuery = let\r\n  Source = csv_clientes\r\nin\r\n  Source;\r\n",
+			"documentLocale": "en-us"
+		}
+	}
+}

@@ -10,6 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"fileName": "clientes.txt",
 				"container": "input"
 			},
 			"columnDelimiter": ",",
