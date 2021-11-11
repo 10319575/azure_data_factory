@@ -1,0 +1,70 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Nombre de instancia de Data Factory",
+			"defaultValue": "data-factory-rjz"
+		},
+		"linked_server_SqlServer_onprem_W10PROF_properties_typeProperties_connectionString_secretName": {
+			"type": "string",
+			"defaultValue": "sqlserver-onprem-W10PROF-passwd"
+		},
+		"linked_server_adls_gen2_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://storageaccountrjz.dfs.core.windows.net/"
+		},
+		"linked_server_akv_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://keyvault-rjz.vault.azure.net/"
+		},
+		"linked_server_blobstorage_properties_typeProperties_serviceEndpoint": {
+			"type": "string",
+			"defaultValue": "https://blobstoragerjz.blob.core.windows.net/"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI de la cuenta de almacenamiento que contiene las plantillas de ARM vinculadas."
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Token de SAS para la cuenta de almacenamiento que contiene las plantillas de ARM vinculadas"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "data-factory-rjz_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"linked_server_adls_gen2_properties_typeProperties_url": {
+						"value": "[parameters('linked_server_adls_gen2_properties_typeProperties_url')]"
+					},
+					"linked_server_akv_properties_typeProperties_baseUrl": {
+						"value": "[parameters('linked_server_akv_properties_typeProperties_baseUrl')]"
+					},
+					"linked_server_blobstorage_properties_typeProperties_serviceEndpoint": {
+						"value": "[parameters('linked_server_blobstorage_properties_typeProperties_serviceEndpoint')]"
+					},
+					"linked_server_SqlServer_onprem_W10PROF_properties_typeProperties_connectionString_secretName": {
+						"value": "[parameters('linked_server_SqlServer_onprem_W10PROF_properties_typeProperties_connectionString_secretName')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
