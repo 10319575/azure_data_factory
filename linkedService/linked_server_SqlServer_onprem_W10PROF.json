@@ -4,8 +4,7 @@
 		"annotations": [],
 		"type": "SqlServer",
 		"typeProperties": {
-			"connectionString": "Integrated Security=False;Data Source=W10PROF;Initial Catalog=source;User ID=usuario_bi",
-			"password": {
+			"connectionString": {
 				"type": "AzureKeyVaultSecret",
 				"store": {
 					"referenceName": "linked_server_akv",
