@@ -1,5 +1,5 @@
 {
-	"name": "pipeline_copy_sqlserver_blob_storage",
+	"name": "extract_load_bbdd_sqlserver",
 	"properties": {
 		"activities": [
 			{
