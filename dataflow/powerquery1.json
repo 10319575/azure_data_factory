@@ -13,7 +13,7 @@
 					}
 				}
 			],
-			"script": "section Section1;\r\nshared csv_clientes = let\r\n  AdfDoc = AzureStorage.BlobContents(\"https://blobstoragerjz.blob.core.windows.net/input/cars.csv\"),\r\n  Csv = Csv.Document(AdfDoc, [Delimiter = \",\", Encoding = TextEncoding.Utf8, QuoteStyle = QuoteStyle.Csv])\r\nin\r\n  Csv;\r\n",
+			"script": "section Section1;\r\nshared csv_clientes = let\r\n  AdfDoc = AzureStorage.BlobContents(\"https://blobstoragerjz.blob.core.windows.net/input/clientes.txt\"),\r\n  Csv = Csv.Document(AdfDoc, [Delimiter = \",\", Encoding = TextEncoding.Utf8, QuoteStyle = QuoteStyle.Csv]),\r\n  #\"Columnas con nombre cambiado\" = Table.RenameColumns(Csv, {{\"Column1\", \"id\"}, {\"Column2\", \"name\"}, {\"Column3\", \"type\"}})\r\nin\r\n  #\"Columnas con nombre cambiado\";\r\n",
 			"documentLocale": "en-us"
 		}
 	}
