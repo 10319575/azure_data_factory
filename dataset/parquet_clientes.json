@@ -1,5 +1,5 @@
 {
-	"name": "Parquet1",
+	"name": "parquet_clientes",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "linked_server_adls_gen2",
