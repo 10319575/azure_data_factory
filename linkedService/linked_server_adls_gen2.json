@@ -4,15 +4,7 @@
 		"annotations": [],
 		"type": "AzureBlobFS",
 		"typeProperties": {
-			"url": "https://storageaccountrjz.dfs.core.windows.net/",
-			"accountKey": {
-				"type": "AzureKeyVaultSecret",
-				"store": {
-					"referenceName": "linked_server_akv",
-					"type": "LinkedServiceReference"
-				},
-				"secretName": "storageaccountrjz"
-			}
+			"url": "https://storageaccountrjz.dfs.core.windows.net/"
 		}
 	},
 	"type": "Microsoft.DataFactory/factories/linkedservices"
