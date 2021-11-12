@@ -10,7 +10,6 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "clientes.txt",
 				"container": "input"
 			},
 			"columnDelimiter": ",",
@@ -37,5 +36,6 @@
 				"type": "String"
 			}
 		]
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
 }

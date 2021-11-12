@@ -1,11 +1,11 @@
 {
 	"name": "linked_server_adls_gen2",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
 		"annotations": [],
 		"type": "AzureBlobFS",
 		"typeProperties": {
 			"url": "https://storageaccountrjz.dfs.core.windows.net/"
 		}
-	},
-	"type": "Microsoft.DataFactory/factories/linkedservices"
+	}
 }

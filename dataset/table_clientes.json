@@ -27,5 +27,6 @@
 			"schema": "",
 			"table": "clientes"
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
 }

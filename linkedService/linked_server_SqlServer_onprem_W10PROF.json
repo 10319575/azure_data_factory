@@ -1,5 +1,6 @@
 {
 	"name": "linked_server_SqlServer_onprem_W10PROF",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
 		"annotations": [],
 		"type": "SqlServer",
