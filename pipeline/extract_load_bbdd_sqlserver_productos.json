@@ -43,13 +43,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "table_clientes",
+						"referenceName": "table_productos",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "csv_clientes",
+						"referenceName": "csv_productos",
 						"type": "DatasetReference"
 					}
 				]
