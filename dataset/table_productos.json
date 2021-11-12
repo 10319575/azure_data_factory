@@ -1,0 +1,32 @@
+{
+	"name": "table_productos",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "linked_server_SqlServer_onprem_W10PROF",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "id_cliente",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "nombre_cliente",
+				"type": "nvarchar"
+			},
+			{
+				"name": "tipo_cliente",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "",
+			"table": "productos"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
