@@ -1,5 +1,5 @@
 {
-	"name": "table_clientes",
+	"name": "table_productos",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "linked_server_SqlServer_onprem_W10PROF",
